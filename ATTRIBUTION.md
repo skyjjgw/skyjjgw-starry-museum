@@ -8,3 +8,6 @@
 - Other bundled libraries retain their embedded copyright notices and accompanying assets/vendor license files.
 
 The flow effect is not Petros Vrellis's implementation. Personal branded images and project illustrations remain part of this personal site, not the anonymous template submission.
+
+- Smiley Sans and LXGW WenKai fonts: SIL Open Font License notices in assets/fonts/.
+- React and React DOM: MIT notices in assets/vendor/. OGL 1.0.11 declares Unlicense; see assets/vendor/OGL-LICENSE.txt.

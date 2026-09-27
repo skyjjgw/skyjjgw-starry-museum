@@ -1,0 +1,5 @@
+OGL 1.0.11
+Source: https://github.com/oframe/ogl
+License identifier declared in the distributed package.json: Unlicense
+License terms: https://unlicense.org/
+The upstream npm package and repository do not include a separate LICENSE file.

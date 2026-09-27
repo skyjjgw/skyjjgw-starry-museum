@@ -20,3 +20,8 @@
 
 第三方代码和素材保留各自原始授权，见 `ATTRIBUTION.md` 和 `assets` 中的 LICENSE 文件。
 个人简介、品牌和项目素材未额外授予通用模板再分发许可。
+
+## 联系
+
+- 个人网站：[skyjjgw.com](https://skyjjgw.com)
+- 邮箱：[skyjjgw@gmail.com](mailto:skyjjgw@gmail.com)
