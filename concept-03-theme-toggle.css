@@ -1,0 +1,63 @@
+/* Shared style switch for the original and tech concepts. */
+.concept3 .nav .links .theme-switch{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:9px 12px;
+  border:1px solid #9bbdc860;
+  border-radius:999px;
+  background:#ffffff59;
+  color:#285a70;
+  box-shadow:inset 0 1px 0 #fff9,0 3px 14px #285a7010;
+  font-size:12px;
+  font-weight:700;
+  line-height:1;
+  white-space:nowrap;
+  transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.concept3 .nav .links .theme-switch:hover{
+  transform:translateY(-2px);
+  border-color:#56b8d4a8;
+  background:#effbffb8;
+  color:#174a63;
+  box-shadow:0 7px 20px #3794b52b;
+}
+.concept3 .nav .links .theme-switch:focus-visible{outline:2px solid #278fb5;outline-offset:3px}
+.concept3 .theme-switch-orb{
+  display:block;
+  width:13px;
+  height:13px;
+  flex:none;
+  border:1px solid #65bbd6;
+  border-radius:50%;
+  background:linear-gradient(135deg,#f6fdff 0 48%,#278fba 50% 100%);
+  box-shadow:0 0 0 3px #77cce624;
+}
+.concept3.tech3 .nav .links .theme-switch{
+  border-color:#8be8f35c;
+  background:#80dced15;
+  color:#cef5fb;
+  box-shadow:inset 0 1px 0 #d7ffff1a,0 0 16px #4bc6dd17;
+}
+.concept3.tech3 .nav .links .theme-switch:hover{
+  border-color:#99eff5ab;
+  background:#8ce5f32d;
+  color:#f4feff;
+  box-shadow:0 0 20px #60d7e846;
+}
+.concept3.tech3 .nav .links .theme-switch:focus-visible{outline-color:#91ebf7}
+.concept3.tech3 .theme-switch-orb{
+  border-color:#a9eaf2;
+  background:linear-gradient(135deg,#e9fbfc 0 48%,#75d7e9 50% 100%);
+  box-shadow:0 0 0 3px #85eaf42a,0 0 10px #81e8f680;
+}
+@media(max-width:760px){
+  .concept3 .nav .links .theme-switch{display:inline-flex;padding:8px 10px}
+}
+@media(max-width:390px){
+  .concept3 .nav .links>.pill{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .concept3 .nav .links .theme-switch{transition:none}
+}

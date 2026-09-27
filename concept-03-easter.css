@@ -1,0 +1,35 @@
+.concept3 .concept3-art .egg-star{position:absolute;z-index:6;width:44px;height:44px;display:grid;place-items:center;border:1px solid #fff9;border-radius:50%;background:#fff7d9;color:#dba941;font-size:27px;line-height:1;box-shadow:0 0 0 7px #ffdf8950,0 0 30px #f4c764a6;opacity:0;transform:scale(.55);transition:opacity .2s ease,transform .25s ease;cursor:pointer}
+.concept3 .concept3-art .egg-star.is-lit,.concept3 .concept3-art .egg-star:focus-visible{opacity:1;transform:scale(1)}
+.concept3 .concept3-art .egg-star:focus-visible{outline:3px solid #ecc25e;outline-offset:5px}
+.concept3 .concept3-art .egg-star.is-found{opacity:1;transform:scale(.85);background:#f8fdff;color:#299bc9;box-shadow:0 0 0 6px #b6e4f188;cursor:default}
+.concept3 .concept3-art .egg-star-one{left:26%;top:31%}
+.concept3 .concept3-art .egg-star-two{right:24%;top:38%}
+.concept3 .concept3-art .egg-star-three{left:36%;bottom:22%}
+.concept3 .concept3-art .egg-footer{position:absolute;z-index:7;bottom:-8px;left:0;width:100%;display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center;pointer-events:none}
+.concept3 .concept3-art .egg-hint{margin:0;color:#568da6;font-size:12px;font-weight:650;letter-spacing:.035em;text-shadow:0 1px 0 #ffffffa8}
+.concept3 .concept3-art .egg-progress{display:flex;align-items:center;gap:5px;color:#488baa;font-size:11px;font-weight:800}
+.concept3 .concept3-art .egg-progress span{margin-right:5px}
+.concept3 .concept3-art .egg-progress i{display:block;width:8px;height:8px;border-radius:50%;background:#bedde9}
+.concept3 .concept3-art .egg-progress i.is-found{background:#edbd51;box-shadow:0 0 9px #f1c75f}
+.concept3 .concept3-art .egg-progress[hidden],.concept3 .concept3-art .egg-scratch-card[hidden],.concept3 .concept3-art .egg-restart[hidden],.concept3 .concept3-art .egg-scratch-canvas[hidden]{display:none!important}
+.concept3 .concept3-art .egg-scratch-card{position:absolute;z-index:10;left:50%;top:48%;width:min(92vw,445px);padding:24px;border:1px solid #f0e2ba;border-radius:25px;background:#fffefa;box-shadow:0 27px 72px #46758b5c;transform:translate(-50%,-50%);text-align:center;animation:egg-card-arrive .5s cubic-bezier(.2,.9,.25,1.1)}
+@keyframes egg-card-arrive{from{opacity:0;transform:translate(-50%,-44%) scale(.88)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+.concept3 .concept3-art .egg-scratch-card>small{color:#cfa245;font-size:10px;letter-spacing:.15em;font-weight:800}
+.concept3 .concept3-art .egg-scratch-card h3{font-size:22px;letter-spacing:-.04em;margin:5px 0 18px;color:#1b526c}
+.concept3 .concept3-art .egg-scratch-box{position:relative;height:156px;border:1px solid #d1e7ed;border-radius:17px;overflow:hidden;background:#e3f6fa}
+.concept3 .concept3-art .egg-scratch-under{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 18% 16%,#fff0b4,transparent 42%),linear-gradient(125deg,#eefaff,#fff8df);color:#5495ae}
+.concept3 .concept3-art .egg-scratch-under span{font-size:11px;font-weight:750}
+.concept3 .concept3-art .egg-scratch-under strong{font-size:32px;letter-spacing:.18em;color:#299bc9;line-height:1.25}
+.concept3 .concept3-art .egg-scratch-under small{font-size:10px;color:#8daeb9}
+.concept3 .concept3-art .egg-scratch-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.concept3 .concept3-art .egg-scratch-actions{display:flex;align-items:center;gap:12px;margin-top:15px;color:#83a3af;font-size:11px}
+.concept3 .concept3-art .egg-scratch-actions span{margin-right:auto;text-align:left}
+.concept3 .concept3-art .egg-scratch-actions button{border:0;padding:5px 0;background:none;color:#287f9e;font-size:11px;font-weight:750;cursor:pointer}
+.concept3 .concept3-art .egg-scratch-actions button:hover{text-decoration:underline}
+.concept3 .concept3-art .egg-restart{position:absolute;z-index:11;right:2%;bottom:1%;border:1px solid #d2eaf1;border-radius:99px;background:#fffdf4;color:#2a7897;font-size:11px;font-weight:750;padding:7px 12px;cursor:pointer;box-shadow:0 6px 16px #37718b2b}
+@media(max-width:760px){.concept3 .concept3-art .egg-star{width:37px;height:37px;font-size:23px}.concept3 .concept3-art .egg-star-one{left:16%;top:28%}.concept3 .concept3-art .egg-star-two{right:15%;top:35%}.concept3 .concept3-art .egg-star-three{left:34%;bottom:21%}.concept3 .concept3-art .egg-footer{bottom:-16px}.concept3 .concept3-art .egg-hint{font-size:11px}.concept3 .concept3-art .egg-scratch-card{padding:19px;top:47%}.concept3 .concept3-art .egg-scratch-card h3{font-size:19px}.concept3 .concept3-art .egg-scratch-box{height:132px}.concept3 .concept3-art .egg-restart{right:0;bottom:-30px}}
+@media(prefers-reduced-motion:reduce){.concept3 .concept3-art .egg-scratch-card{animation:none}.concept3 .concept3-art .egg-star{transition:none}}
+.egg-scratch-actions{flex-wrap:wrap}
+.egg-scratch-actions .egg-relay-link{display:inline-flex;align-items:center;justify-content:center;background:#268cac;color:#fff;border:1px solid #268cac;border-radius:20px;padding:7px 12px;font-size:12px;font-weight:600;text-decoration:none}
+.egg-scratch-actions .egg-relay-link:hover{background:#1a708d}
+.egg-scratch-actions .egg-relay-link:focus-visible{outline:2px solid #268cac;outline-offset:3px}

@@ -1,0 +1,326 @@
+/* The closed book is a Skymoni idea archive; the paper spreads remain unchanged. */
+.concept3 .book-scroll .book-pin::before {
+  content: "";
+  position: absolute;
+  inset: -7% -4% 2%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse 36% 34% at 48% 54%, #82d9f245, transparent 82%),
+    radial-gradient(ellipse 26% 28% at 67% 49%, #f1dc9650, transparent 85%);
+  filter: blur(24px);
+  transition: opacity 700ms ease;
+}
+.concept3 .book-scroll.book-closed .book-pin::before { opacity: 1; }
+.concept3 .book-scroll .book-object { z-index: 1; transform: translateX(-25%); }
+.concept3 .book-scroll .book-object::before {
+  background: linear-gradient(110deg, #173749, #31566a 12%, #153b51 65%, #0f3046);
+  box-shadow: 0 40px 70px #17475a38, 0 8px 22px #102e4338, 0 1px 4px #0c263b55;
+}
+.concept3 .book-scroll .book-cover-front {
+  --light-x: 50%;
+  --light-y: 38%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+  justify-items: center;
+  gap: 0;
+  padding: clamp(24px, 3.4vw, 45px);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at var(--light-x) var(--light-y), #b1eafa35 0, #b1eafa0b 25%, transparent 53%),
+    radial-gradient(ellipse at 72% 8%, #8dd9ed25, transparent 55%),
+    repeating-linear-gradient(0deg, transparent 0 24px, #d0eff705 24px 25px),
+    linear-gradient(142deg, #1b4b64 0%, #113b55 40%, #0d2d45 100%);
+  color: #e8f7fa;
+  border: 1px solid #91d1de72;
+  box-shadow:
+    inset 12px 0 21px #061f3285,
+    inset -2px 0 8px #bbf7fb42,
+    inset 0 0 0 4px #061e2a35,
+    10px 18px 34px #163e5254,
+    2px 3px 7px #0a293a50;
+  transition: box-shadow 350ms ease;
+}
+.concept3 .book-scroll .book-cover-front:hover {
+  box-shadow:
+    inset 12px 0 21px #061f3285,
+    inset -2px 0 8px #bbf7fb66,
+    inset 0 0 0 4px #061e2a35,
+    15px 25px 42px #163e5269,
+    0 0 36px #70cce548;
+}
+.concept3 .book-scroll .book-cover-front::before {
+  inset: 16px;
+  z-index: 2;
+  border: 1px solid #9bdcea4f;
+  border-radius: 2px 9px 9px 2px;
+  box-shadow: inset 0 0 0 1px #ffffff08;
+}
+.concept3 .book-scroll .book-cover-front::after {
+  content: "";
+  position: absolute;
+  inset: -25% auto -25% -95%;
+  width: 55%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(100deg, transparent 23%, #e0faff00 43%, #e0faff0d 50%, #e0faff00 58%, transparent 75%);
+  transform: translateX(0) skewX(-16deg);
+  animation: archive-sheen 9s ease-in-out infinite;
+}
+.concept3 .book-scroll .book-cover-front > * { position: relative; z-index: 1; }
+.concept3 .book-scroll .book-cover-index,
+.concept3 .book-scroll .book-cover-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  text-align: left;
+}
+.concept3 .book-scroll .book-cover-index span,
+.concept3 .book-scroll .book-cover-foot span {
+  font: 11px/1.4 Consolas, monospace;
+  letter-spacing: .13em;
+  color: #b7dbe2;
+}
+.concept3 .book-scroll .book-cover-index span:last-child { color: #e7d89f; }
+.concept3 .book-scroll .book-cover-emblem {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: clamp(160px, 22vw, 220px);
+  height: clamp(145px, 19vw, 188px);
+  margin: 7px auto 0;
+  border-radius: 32px;
+  border: 1px solid #baf1f45e;
+  background: linear-gradient(145deg, #cff6ff3d, #a1dfe816 52%, #ffffff09);
+  box-shadow: inset 0 1px #ffffff85, inset 0 -15px 35px #32a9c017, 0 17px 34px #061f325c, 0 0 44px #80e6f226;
+  backdrop-filter: blur(2px) saturate(130%);
+  -webkit-backdrop-filter: blur(2px) saturate(130%);
+  transform: translateZ(15px);
+  animation: archive-float 5.5s ease-in-out infinite;
+}
+.concept3 .book-scroll .book-cover-emblem::before {
+  content: "";
+  position: absolute;
+  width: 73%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, #73d9f14a, #73d9f105 63%, transparent 72%);
+  filter: blur(8px);
+}
+.concept3 .book-scroll .book-cover-emblem svg {
+  position: relative;
+  display: block;
+  width: 93%;
+  height: 78%;
+  margin: 0;
+  overflow: visible;
+  filter: drop-shadow(0 0 4px #99eaff40);
+}
+.concept3 .book-scroll .archive-cloud {
+  fill: #d2f4fa20;
+  stroke: url(#archive-cloud);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.concept3 .book-scroll .archive-cloud-line { stroke: #b9edf6ab; stroke-width: 1.4; }
+.concept3 .book-scroll .archive-star { fill: #f7e9aa; stroke: #fff4bf; stroke-width: 1.2; }
+.concept3 .book-scroll .archive-spark { fill: #c2f5fa; }
+.concept3 .book-scroll .book-cover-emblem .book-emblem-caption {
+  position: absolute;
+  bottom: 12px;
+  font: 10px/1.3 Consolas, monospace;
+  letter-spacing: .2em;
+  color: #b9e5ea;
+}
+.concept3 .book-scroll .book-cover-title { align-self: end; width: 100%; }
+.concept3 .book-scroll .book-cover-title > span {
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: #add4dd;
+}
+.concept3 .book-scroll .book-cover-title h3 {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  margin: 12px 0 4px;
+  color: #f5fbf9;
+  font: 650 clamp(35px, 4vw, 54px)/1.2 Inter, "Microsoft YaHei", sans-serif;
+  letter-spacing: .05em;
+  text-shadow: 0 1px 4px #84e4ed24;
+}
+.concept3 .book-scroll .book-cover-title h3 span {
+  font: 12px Consolas, monospace;
+  letter-spacing: .04em;
+  color: #f0d99b;
+}
+.concept3 .book-scroll .book-cover-title p {
+  max-width: none;
+  margin: 8px 0 0;
+  color: #bdd8dc;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.concept3 .book-scroll .book-cover-route {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px 0 22px;
+  color: #c6e4e6;
+  font: 11px Consolas, monospace;
+  letter-spacing: .07em;
+}
+.concept3 .book-scroll .book-cover-route span { color: inherit; font: inherit; letter-spacing: inherit; }
+.concept3 .book-scroll .book-cover-route b { color: #edf8f7; font-weight: 500; margin-left: 2px; }
+.concept3 .book-scroll .book-cover-route i { width: 24px; height: 1px; background: #9cd2da78; }
+.concept3 .book-scroll .book-cover-foot { border-top: 1px solid #9fdde041; padding-top: 15px; }
+.concept3 .book-scroll .book-cover-foot em {
+  margin: 0;
+  color: #f7e8b2;
+  font-size: 11px;
+  letter-spacing: .08em;
+  transition: transform 200ms ease, color 200ms ease;
+}
+.concept3 .book-scroll .book-cover-front:hover .book-cover-foot em { color: #fff7d3; transform: translateX(3px); }
+.concept3 .book-scroll .book-cover .book-cover-back { box-shadow: 0 0 0 9px #234b60, inset -23px 0 31px -22px #463821a0, 6px 12px 22px #3f536326; }
+
+/* Two little makers animate beside the closed archive, behind its physical pages. */
+.concept3 .book-walkers { display: none; }
+.concept3 .book-scroll .book-walkers {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+.concept3 .book-scroll:not(.book-closed) .book-walkers { opacity: .12; }
+.concept3 .book-walker {
+  position: absolute;
+  bottom: 90px;
+  display: block;
+  width: 102px;
+  height: 107px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #376b7e;
+  cursor: pointer;
+  pointer-events: auto;
+  filter: drop-shadow(0 4px 5px #2f6a7c16);
+  animation: archive-stroll 9.6s ease-in-out infinite;
+}
+.concept3 .book-scroll:not(.book-closed) .book-walker { pointer-events: none; }
+.concept3 .book-walker:focus-visible { outline: 2px solid #4e9fc2; outline-offset: 3px; border-radius: 20px; }
+.concept3 .book-walker-idea { left: 7%; }
+.concept3 .book-walker-builder { right: 7%; bottom: 102px; animation-delay: -3.8s; animation-direction: reverse; }
+.concept3 .book-walker svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.concept3 .book-walker svg path,
+.concept3 .book-walker svg circle,
+.concept3 .book-walker svg rect { vector-effect: non-scaling-stroke; }
+.concept3 .walker-shadow { fill: #7cabb127; }
+.concept3 .walker-bob { animation: archive-step-bob .48s ease-in-out infinite alternate; }
+.concept3 .walker-leg,
+.concept3 .walker-arm { transform-box: view-box; }
+.concept3 .walker-leg { animation: archive-leg .96s ease-in-out infinite; }
+.concept3 .walker-leg-a { transform-origin: 48px 73px; }
+.concept3 .walker-leg-b { transform-origin: 58px 73px; }
+.concept3 .walker-leg-b { animation-delay: -.48s; }
+.concept3 .walker-arm { animation: archive-arm .96s ease-in-out infinite; }
+.concept3 .walker-arm-a { transform-origin: 43px 56px; animation-delay: -.48s; }
+.concept3 .walker-arm-b { transform-origin: 64px 56px; }
+.concept3 .walker-pants,
+.concept3 .walker-sleeve { fill: none; stroke: #4a7c8a; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+.concept3 .walker-shoe { fill: #4a7c8a; }
+.concept3 .walker-hand { fill: #fff8ea; stroke: #4a7c8a; stroke-width: 1.3; }
+.concept3 .walker-shirt { fill: #d3eaf0; stroke: #4a7c8a; stroke-width: 1.9; stroke-linejoin: round; }
+.concept3 .book-walker-builder .walker-shirt { fill: #e0eadb; }
+.concept3 .walker-face { fill: #fffaf0; stroke: #4a7c8a; stroke-width: 1.9; }
+.concept3 .walker-cap { fill: #a6d6e5; stroke: #4a7c8a; stroke-width: 1.6; stroke-linejoin: round; }
+.concept3 .book-walker-builder .walker-cap { fill: #c0d7c2; }
+.concept3 .walker-eye { fill: #345b68; }
+.concept3 .walker-smile { fill: none; stroke: #345b68; stroke-width: 1.4; stroke-linecap: round; }
+.concept3 .walker-spark { fill: #f6db82; stroke: #bc9854; stroke-width: 1; animation: archive-star-pop 2.8s ease-in-out infinite; transform-origin: 83px 47px; transform-box: view-box; }
+.concept3 .walker-tool { fill: #f5e8b9; stroke: #688d91; stroke-width: 1.3; }
+.concept3 .walker-tool-line { fill: none; stroke: #7da5a5; stroke-width: 1.2; }
+.concept3 .book-walker-bubble {
+  position: absolute;
+  top: -12px;
+  left: 49%;
+  z-index: 1;
+  width: max-content;
+  max-width: 135px;
+  padding: 6px 9px;
+  border: 1px solid #a9cbd0;
+  border-radius: 12px 12px 12px 3px;
+  background: #fffdf7e8;
+  box-shadow: 0 3px 10px #4a809112;
+  color: #497e8d;
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(7px) rotate(-5deg);
+  animation: archive-speak 7s ease-in-out infinite;
+}
+.concept3 .book-walker-builder .book-walker-bubble { left: auto; right: 45%; transform: translateY(7px) rotate(4deg); animation-delay: -3.5s; }
+.concept3 .book-walker.is-paused,
+.concept3 .book-walker.is-paused * { animation-play-state: paused !important; }
+.concept3 .book-walker.is-paused .book-walker-bubble { animation: none; opacity: 1; transform: translateY(0) rotate(-5deg); }
+.concept3 .book-walker-builder.is-paused .book-walker-bubble { transform: translateY(0) rotate(4deg); }
+
+@keyframes archive-stroll {
+  0%, 100% { transform: translateX(-20px); }
+  50% { transform: translateX(38px); }
+}
+@keyframes archive-step-bob { to { transform: translateY(-1px); } }
+@keyframes archive-leg {
+  0%, 50%, 100% { transform: translateX(0) scaleY(1); }
+  24% { transform: translateX(2px) scaleY(.89); }
+  38% { transform: translateX(3px) scaleY(.96); }
+  75% { transform: translateX(-1px) scaleY(1); }
+}
+@keyframes archive-arm {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+@keyframes archive-star-pop { 50% { transform: scale(1.08); filter: drop-shadow(0 0 3px #f5d56d); } }
+@keyframes archive-speak {
+  0%, 17%, 51%, 100% { opacity: 0; translate: 0 7px; }
+  22%, 44% { opacity: 1; translate: 0 0; }
+}
+
+@keyframes archive-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -7px; } }
+@keyframes archive-sheen {
+  0%, 36% { transform: translateX(0) skewX(-16deg); }
+  58%, 100% { transform: translateX(420%) skewX(-16deg); }
+}
+@media (max-height: 800px) {
+  .concept3 .book-scroll .book-cover-front { padding: 24px 34px; }
+  .concept3 .book-scroll .book-cover-emblem { width: 165px; height: 140px; border-radius: 25px; }
+  .concept3 .book-scroll .book-cover-title h3 { font-size: 40px; }
+  .concept3 .book-scroll .book-cover-route { margin: 13px 0; }
+}
+@media (max-width: 960px) {
+  .concept3 .book-scroll .book-cover-front { padding: 25px; }
+  .concept3 .book-scroll .book-cover-title h3 { font-size: 38px; }
+  .concept3 .book-scroll .book-cover-emblem { width: 150px; height: 135px; }
+  .concept3 .book-scroll .book-cover-title > span { font-size: 10px; }
+  .concept3 .book-scroll .book-cover-title p { font-size: 11px; }
+  .concept3 .book-scroll .book-cover-route { gap: 6px; }
+  .concept3 .book-scroll .book-cover-route i { width: 13px; }
+  .concept3 .book-walker-idea { left: 0; }
+  .concept3 .book-walker-builder { right: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .concept3 .book-scroll .book-cover-emblem,
+  .concept3 .book-scroll .book-cover-front::after,
+  .concept3 .book-walker,
+  .concept3 .book-walker * { animation: none; }
+}

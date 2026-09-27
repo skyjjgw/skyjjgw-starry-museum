@@ -1,0 +1,74 @@
+/* Physical paper / left-hinged page geometry adapted from AI_Animation scholar-notes.
+   Unclecheng, MIT; source and license retained in assets/vendor/ai-animation/. */
+.concept3 .openbook-section{padding:80px 0 100px;position:relative}
+.concept3 .openbook-heading{text-align:center;margin-bottom:38px}
+.concept3 .openbook-heading h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.055em;margin:12px 0;color:#24495b}
+.concept3 .openbook-heading p{color:#7b929e;line-height:1.8;font-size:14px}
+.concept3 .book-pin{position:relative;padding:20px 0 10px}
+.concept3 .book-object{position:relative;margin:auto;width:min(100%,1130px);color:#3c5660}
+.concept3 .book-paper{position:relative;padding:clamp(24px,3.4vw,52px);background-color:#fffdf5;background-image:repeating-linear-gradient(transparent,transparent 31px,#91b4c016 31px,#91b4c016 32px);border:1px solid #e6e0cd;box-sizing:border-box;overflow:hidden}
+.concept3 .book-paper::after{content:"";pointer-events:none;position:absolute;inset:0;background:linear-gradient(90deg,#66563a09,transparent 12%,transparent 88%,#66563a08)}
+.concept3 .book-paper small.book-kicker{font:10px/1.5 Consolas,monospace;letter-spacing:.15em;color:#8ba0a4;display:block;margin-bottom:24px}
+.concept3 .book-paper h3{font-size:clamp(28px,3.4vw,45px);font-weight:500;font-family:KaiTi,STKaiti,serif;line-height:1.35;letter-spacing:.02em;margin:0 0 18px;color:#375c6c}
+.concept3 .book-paper p{font-size:14px;line-height:1.95;max-width:340px;margin:12px 0;color:#778a8f}
+.concept3 .book-paper mark{color:inherit;background:linear-gradient(transparent 58%,#f1d88780 58%,#f1d88780 91%,transparent 91%)}
+.concept3 .book-page-no{position:absolute;bottom:22px;right:30px;font:11px Consolas,monospace;color:#a4aaa0}
+.concept3 .book-handnote{font-family:KaiTi,STKaiti,serif;font-size:20px;color:#75959f;transform:rotate(-5deg);margin:26px 0 0}
+.concept3 .book-drawing{display:block;width:100%;height:160px;fill:none;stroke:#679ab0;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin:12px 0}
+.concept3 .book-drawing .book-ink{stroke-dasharray:1;stroke-dashoffset:0}
+.concept3 .book-pencil-list{list-style:none;padding:0;margin:20px 0;display:grid;gap:16px;font-size:15px;color:#668590}
+.concept3 .book-pencil-list li::before{content:"✓";margin-right:12px;color:#93b7a6}
+.concept3 .book-sticky-note{background:#f9edbc;padding:19px 22px;transform:rotate(3deg);box-shadow:1px 7px 12px #6158380b;font-family:KaiTi,STKaiti,serif;font-size:18px;line-height:1.65;width:85%;margin:23px auto;position:relative}
+.concept3 .book-sticky-note::before{content:"";position:absolute;top:-9px;left:35%;width:60px;height:20px;transform:rotate(-5deg);background:#d4e6dfaa}
+.concept3 .book-mini-window{border:1px solid #b5cbd0;border-radius:9px;background:#f6fbfa;box-shadow:5px 9px 0 #e6ede780;margin-top:25px;transform:rotate(-2deg);overflow:hidden}
+.concept3 .book-mini-window header{font-size:10px;letter-spacing:.1em;padding:13px 16px;border-bottom:1px solid #d9e5e3;color:#82999e}
+.concept3 .book-mini-window section{padding:24px 20px}
+.concept3 .book-mini-window strong{font-size:21px;font-weight:500;color:#568395}
+.concept3 .book-mini-window p{font-size:12px}
+.concept3 .book-mini-window .book-mini-line{height:6px;background:#d7e9e8;border-radius:4px;margin:16px 0;width:90%}
+.concept3 .book-mini-window .book-mini-line:nth-last-child(1){width:55%;background:#ecddb5}
+.concept3 .book-link{display:inline-block;margin-top:22px;color:#347f9b;text-decoration:none;border-bottom:1px solid #b6d5dc;padding:4px 0;font-size:13px}
+.concept3 .book-controls{display:none;align-items:center;justify-content:space-between;margin:30px auto 0;max-width:1010px;color:#869ca6;font-size:12px;gap:14px}
+.concept3 .book-buttons{display:flex;gap:8px;align-items:center}
+.concept3 .book-buttons button{font:inherit;color:#527f90;border:1px solid #cee1e5;background:#ffffff70;border-radius:50%;width:42px;height:42px;cursor:pointer}
+.concept3 .book-buttons button:disabled{opacity:.3;cursor:default}
+.concept3 .book-buttons button:focus-visible,.concept3 .book-link:focus-visible{outline:2px solid #4e9fc2;outline-offset:4px}
+.concept3 .book-caption{text-align:center;margin:24px 0 0;font-size:11px;color:#9caaad}
+/* Baseline is a readable sequence, including without JavaScript and on phones. */
+.concept3 .book-leaf{display:contents}
+.concept3 .book-cover{display:contents}
+.concept3 .book-cover-front{display:none}
+.concept3 .book-object{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.concept3 .book-paper{min-height:490px;border-radius:4px 10px 10px 4px}
+.concept3 .book-paper[data-book-page="1"]{order:1}.concept3 .book-paper[data-book-page="2"]{order:2}.concept3 .book-paper[data-book-page="3"]{order:3}.concept3 .book-paper[data-book-page="4"]{order:4}.concept3 .book-paper[data-book-page="5"]{order:5}.concept3 .book-paper[data-book-page="6"]{order:6}
+/* Desktop: the spread itself is the stage. No outer player panel or clipped camera. */
+.concept3 .book-scroll .book-pin{position:sticky;top:92px}
+.concept3 .book-scroll .book-object{display:block;height:var(--book-height,540px);perspective:1550px;transform-style:preserve-3d;isolation:auto;filter:none}
+.concept3 .book-scroll .book-object::before{content:"";position:absolute;inset:-9px -11px -13px 50%;background:linear-gradient(90deg,#4c6978,#87a5ab 2%,#77959e 12%,#7898a1);border-radius:5px 12px 12px 5px;box-shadow:0 35px 66px #33596a30,0 9px 18px #26465a24,0 1px 3px #243b4840;transform:translateZ(-5px)}
+.concept3 .book-scroll .book-object::after{content:"";position:absolute;left:calc(50% - 12px);top:1px;bottom:1px;width:24px;z-index:31;background:linear-gradient(90deg,#4b594819,transparent 36%,#493b2d20 52%,transparent 82%,#433a3014);pointer-events:none;transform:translateZ(1px)}
+.concept3 .book-scroll .book-cover{display:block;position:absolute;left:50%;width:50%;height:100%;transform-origin:left center;transform-style:preserve-3d;z-index:30}
+.concept3 .book-scroll .book-cover-front{position:absolute;inset:-9px -11px -13px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:translateZ(3px);border-radius:3px 12px 12px 3px;color:#f5f4dd;background:repeating-linear-gradient(90deg,transparent,transparent 2px,#233e4610 2px,#233e4610 4px),linear-gradient(145deg,#729ba8,#406977);box-shadow:inset 13px 0 20px #21475468,inset -3px 0 5px #c2dcdd64,inset 0 0 0 1px #b9d8dc60,8px 14px 24px #334a5140,1px 2px 3px #24425340}
+.concept3 .book-scroll .book-cover-front::before{content:"";position:absolute;inset:23px;border:1px solid #e4e2bc60;border-radius:2px 6px 6px 2px;pointer-events:none}
+.concept3 .book-scroll .book-cover-front small{font:10px Consolas,monospace;letter-spacing:.18em;color:#c4d7d4}
+.concept3 .book-scroll .book-cover-front h3{font:52px/1.3 KaiTi,STKaiti,serif;margin:25px 0 12px;letter-spacing:.1em;color:#f5f4dd}
+.concept3 .book-scroll .book-cover-front p{font-size:14px;line-height:1.9;color:#d3e3de;margin:0}
+.concept3 .book-scroll .book-cover-front svg{width:140px;height:110px;fill:none;stroke:#e9dfab;stroke-width:1.6;margin:15px 0}
+.concept3 .book-scroll .book-cover-front span{font:11px Consolas,monospace;letter-spacing:.2em;color:#d9dfca}
+.concept3 .book-scroll .book-cover-front em{font-size:11px;font-style:normal;margin-top:24px;letter-spacing:.1em;color:#bdcfcd}
+.concept3 .book-scroll .book-cover .book-cover-back{width:100%;left:0;transform:rotateY(180deg);border-radius:9px 3px 3px 9px;box-shadow:0 0 0 9px #77959e,inset -23px 0 31px -22px #463821a0,6px 12px 22px #3f536326}
+.concept3 .book-scroll .book-paper{position:absolute;top:0;bottom:0;width:50%;height:100%;min-height:0;border-radius:3px 8px 8px 3px;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:inset 19px 0 30px -22px #46382190,2px 5px 12px #513f2c18}
+.concept3 .book-scroll .book-base-left{left:0;border-radius:8px 3px 3px 8px;box-shadow:inset -17px 0 25px -22px #46382190}
+.concept3 .book-scroll .book-base-right{right:0}
+.concept3 .book-scroll .book-leaf{display:block;position:absolute;left:50%;width:50%;height:100%;transform-origin:left center;transform-style:preserve-3d;will-change:transform}
+.concept3 .book-scroll .book-leaf .book-paper{width:100%;left:0}
+.concept3 .book-scroll .book-back{transform:rotateY(180deg);border-radius:8px 3px 3px 8px;box-shadow:inset -23px 0 31px -22px #463821a0,2px 5px 12px #513f2c18}
+.concept3 .book-scroll .book-front{transform:rotateY(0deg)}
+.concept3 .book-scroll .book-front::after{background:linear-gradient(90deg,#81745e55,transparent 16%,#51432b66 100%);opacity:var(--shade-opacity,0)}
+.concept3 .book-scroll .book-controls{display:flex}
+.concept3 .book-click-only .book-pin{position:relative;top:auto}
+.concept3 .book-scroll .book-cover-front{cursor:pointer}
+.concept3 .book-scroll .book-paper[aria-hidden="false"]{cursor:pointer}
+.concept3 .book-scroll .book-cover-front:focus-visible{outline:3px solid #51a7c6;outline-offset:8px}
+@media(max-height:800px){.concept3 .book-scroll .book-paper{padding:24px 32px}.concept3 .book-scroll .book-paper h3{font-size:33px;margin-bottom:12px}.concept3 .book-scroll .book-kicker{margin-bottom:15px}.concept3 .book-scroll .book-drawing{height:115px}.concept3 .book-scroll .book-handnote{margin-top:16px}.concept3 .book-scroll .book-sticky-note{margin-top:14px;padding:12px 18px}.concept3 .book-scroll .book-paper p{font-size:13px;margin:8px 0}.concept3 .book-scroll .book-mini-window{margin-top:15px}.concept3 .book-scroll .book-mini-window section{padding:16px}.concept3 .book-scroll .book-pencil-list{gap:12px;margin:15px 0}}
+@media(max-height:800px){.concept3 .book-scroll .book-paper h3{font-size:30px}.concept3 .book-scroll .book-paper p{font-size:12px;line-height:1.75;margin:7px 0}.concept3 .book-scroll .book-drawing{height:76px;margin:8px 0}.concept3 .book-scroll .book-handnote{font-size:18px;margin-top:12px}}
+@media(max-width:700px){.concept3 .openbook-section{padding-top:45px}.concept3 .book-object{display:flex;flex-direction:column;gap:20px}.concept3 .book-paper{min-height:0;padding:30px 28px 55px}.concept3 .book-paper h3{font-size:34px}.concept3 .book-paper p{max-width:none}.concept3 .book-drawing{height:130px}}

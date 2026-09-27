@@ -1,0 +1,9 @@
+/* React Bits GlassSurface: 18% frost, 2px map blur, RGB scales -65/-62/-58. */
+.concept3 .nav,.concept3 .nav.is-scrolled{background:rgba(248,251,251,.18);backdrop-filter:blur(2px) saturate(120%);-webkit-backdrop-filter:blur(2px) saturate(120%)}
+.concept3 .nav.has-refraction{backdrop-filter:url(#skymoni-nav-glass) saturate(1);-webkit-backdrop-filter:url(#skymoni-nav-glass) saturate(1);box-shadow:inset 0 0 2px 1px #29475720,inset 0 0 10px 4px #2947570c,0 8px 24px #193d4c09}
+.concept3 .nav.has-refraction.is-scrolled{border-color:rgba(207,224,226,.5);box-shadow:inset 0 0 2px 1px #29475728,inset 0 0 10px 4px #29475710,inset 0 4px 16px #2947570a,0 12px 32px #193d4c12}
+.concept3 .nav .nav-glass-filter{position:absolute;width:1px;height:1px;inset:0;opacity:0;pointer-events:none;z-index:-1}
+.concept3 .nav>.wrap{position:relative;z-index:1}
+.concept3 .nav .nav-options{background:rgba(116,150,166,.06)}
+.concept3 .nav .nav-pill-indicator{background:rgba(255,255,255,.48);border-color:rgba(255,255,255,.25);box-shadow:0 2px 8px #24597108}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.concept3 .nav,.concept3 .nav.is-scrolled{background:rgba(248,251,251,.92)}}
