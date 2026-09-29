@@ -4,7 +4,7 @@
 
 **这个仓库只包含梵高画框界面及其依赖，不包含另一套独立作品集页面。**
 
-- 在线网站：https://skyjjgw.com/concept-03-world-portal-home.html#frame-1
+- 在线网站：https://skyjjgw.com/
 - 本地运行：`python -m http.server 4174`，然后访问 `http://localhost:4174/`。
 - 静态发布：将整个仓库内容部署到静态服务器。`index.html` 即入口。
 - 修改资料：编辑四个 `portal-exhibit-*.html`；导航、序言和结尾在入口 HTML 中。
